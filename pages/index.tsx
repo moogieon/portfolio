@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import ImageSlider from "../src/components/ImageSlider";
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
 
       <main>
         <div w-text="blue-500">안녕</div>
+        <ImageSlider/>
       </main>
 
       <footer>
