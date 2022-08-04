@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <div w-text="blue-500">안녕</div>
+        <div w-text="blue-500">안녕 포토폴리오용</div>
         <ImageSlider/>
       </main>
 
