@@ -2,8 +2,10 @@ import type { NextPage } from "next";
 
 const AboutMe: NextPage = () => {
   return (
-    <div>
-      <p>about me</p>
+    <div w-h="700px">
+      <p w-font="game " w-text="[#f8ae16]  2xl">
+        About me
+      </p>
     </div>
   );
 };

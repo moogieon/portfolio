@@ -2,8 +2,10 @@ import type { NextPage } from "next";
 
 const Used: NextPage = () => {
   return (
-    <div>
-      <p>사용 가능 기술</p>
+    <div w-h="700px">
+      <p w-font="game " w-text="[#f8ae16]  2xl">
+        Skill
+      </p>
     </div>
   );
 };
