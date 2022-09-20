@@ -14,3 +14,17 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "game";
+  src: url("/font/Galmuri9.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SLEIGothicTTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SLEIGothicTTF.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}

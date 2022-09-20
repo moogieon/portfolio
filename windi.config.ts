@@ -8,4 +8,12 @@ export default defineConfig({
     include: ["**/*.{jsx,tsx,css}"],
     exclude: ["node_modules", ".git", ".next"],
   },
+  theme: {
+    extend: {
+      fontFamily: {
+        game: "game",
+        sans: "SLEIGothicTTF",
+      },
+    },
+  },
 });
