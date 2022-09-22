@@ -1,25 +1,28 @@
 import type { NextPage } from "next";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import Img from "../../public/vercel.svg";
-
-const ImageSlider: NextPage = () => {
-  const data = [
-    { name: "중고나라", src: Img },
-    { name: "헤이고", src: Img },
-    { name: "깃 이슈 트래커", src: Img },
-  ];
-
+import "swiper/css";
+interface Props {
+  data: { name: string; src: string }[];
+}
+const ImageSlider: NextPage<Props> = ({ data }) => {
   return (
     <div w-flex="~" w-items="center">
-      <span> left </span>
-      <ul w-flex="~" w-gap="4">
+      <Swiper
+        w-gap="4"
+        spaceBetween={50}
+        slidesPerView={2}
+        centeredSlides={true}
+        pagination={{
+          clickable: true,
+        }}
+      >
         {data.map((res, idx) => (
-          <li w-border="rounded-full 1px" w-p="x-2 y-2" key={res.name}>
+          <SwiperSlide w-border="rounded-1/2 1px" w-p="x-2 y-2" w-h="min-250px" key={res.name}>
             <Image src={res.src} alt={res.name} />
-          </li>
+          </SwiperSlide>
         ))}
-      </ul>
-      <span> right </span>
+      </Swiper>
     </div>
   );
 };
