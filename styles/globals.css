@@ -13,6 +13,7 @@ a {
 
 * {
   box-sizing: border-box;
+  color: white;
 }
 
 @font-face {
@@ -30,7 +31,8 @@ a {
 }
 
 .background {
-  background: linear-gradient(-45deg, #1d2c41, #b7c9d9, #245e9d, #22131a);
+  /* background: linear-gradient(-45deg, #1d2c41, #bf0101, #f86449, #22131a); */
+  background-color: #292734;
   background-size: 400% 400%;
   position: relative;
   animation: backroundCahnge 20s ease-in-out infinite;
@@ -64,4 +66,86 @@ a {
 .hover-underline-animation:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.animate_text {
+  overflow: hidden;
+  height: 60px;
+  background-color: #ffe841;
+  width: fit-content;
+}
+.line {
+  line-height: 60px;
+}
+.line:first-child {
+  animation: text-anim 8s infinite;
+}
+
+@keyframes text-anim {
+  0% {
+    margin-top: -5px;
+  }
+  16% {
+    margin-top: -65px;
+  }
+  33% {
+    margin-top: -125px;
+  }
+  50% {
+    margin-top: -185px;
+  }
+  66% {
+    margin-top: -125px;
+  }
+  82% {
+    margin-top: -65px;
+  }
+  100% {
+    margin-top: -5px;
+  }
+}
+
+.speech-bubble {
+  position: relative;
+  background: #ffffff;
+  border-radius: 0.4em;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 54px solid transparent;
+  border-right-color: #ffffff;
+  border-left: 0;
+  border-top: 0;
+  margin-top: 2px;
+  margin-left: -54px;
+}
+
+.speech-bubble2 {
+  position: relative;
+  background: #ffffff;
+  border-radius: 0.4em;
+  padding: 30px;
+}
+
+.speech-bubble2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 21px solid transparent;
+  border-top-color: #ffffff;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: 43px;
+  margin-bottom: -21px;
 }

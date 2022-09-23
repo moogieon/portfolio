@@ -15,11 +15,17 @@ const Experiences: NextPage = () => {
     { name: "깃 블로그", src: Img },
   ];
   return (
-    <section w-h="700px" id="experiences" w-p="x-40 t-20">
-      <p w-font="game" w-text="[#f8ae16]  2xl right <md:center">
-        <span w-text="[#c73f16]">E</span>xperiences
+    <section
+      w-h="100vh"
+      id="experiences"
+      w-p="x-20 t-20"
+      w-container="~"
+      w-m="x-auto"
+    >
+      <p w-font="game" w-text="[#686eff]  2xl right <md:center" w-m="b-10">
+        <span w-text="[#f8ae16]">E</span>xperiences
       </p>
-      <div w-m="t-40 x-auto" w-container="~">
+      <div w-m=" x-auto" w-container="~">
         <ul>
           <li>
             <p w-font="game">Work</p>

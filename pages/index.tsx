@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   const nav = [
     { name: "AboutMe", href: "#about" },
     { name: "Experiences", href: "#experiences" },
-    { name: "Skills", href: "#skills" },
+    { name: "Skill", href: "#skills" },
   ];
   const handleLinkClick = (href: string) => (e: React.MouseEvent) => {
     if (href.startsWith("#")) {
@@ -19,6 +19,7 @@ const Home: NextPage = () => {
       document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -28,26 +29,29 @@ const Home: NextPage = () => {
   return (
     <>
       <div w-h="full" className="background">
-        <div w-container="~" w-m="x-auto" w-p="x-10px y-30px" w-pos="relative">
+        <div w-pos="relative">
           <div
-            w-flex="<md:~ <md:row"
+            w-flex="~ row"
             w-items="<md:center"
+            w-justify="<md:center"
             w-gap="5"
-            w-pos="fixed"
+            w-pos="fixed left-10 top-5"
+            w-z="10"
           >
             <h1
               w-cursor="pointer"
               w-font="game "
-              w-text="[#f8ae16] left 2xl hover:[#c73f16]"
-              w-transition="duration-150"
+              w-text="[#686eff] left 2xl hover:[#1c1d49]"
+              w-transition="~ duration-150"
               onClick={scrollToTop}
             >
               Mook
-              <p w-text="xs [#f416f8]">Frontend Developer</p>
+              <p w-text="xs [#f8ae16] ">Frontend Developer</p>
             </h1>
             <ul
-              w-m="md:t-20"
-              w-flex="~ col <md:row"
+              w-h="auto"
+              w-flex="~ row"
+              w-items="md:center"
               w-justify="<md:between"
               w-gap="10"
               w-transition="duration-200 delay-75"
@@ -72,8 +76,8 @@ const Home: NextPage = () => {
           </div>
           <LandingPage />
           <AboutMe />
-          <Experiences />
           <Skills />
+          <Experiences />
         </div>
       </div>
     </>
