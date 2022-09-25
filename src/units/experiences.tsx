@@ -15,44 +15,46 @@ const Experiences: NextPage = () => {
     { name: "깃 블로그", src: Img },
   ];
   return (
-    <section
-      w-h="100vh"
-      id="experiences"
-      w-p="x-20 t-20"
-      w-container="~"
-      w-m="x-auto"
-    >
-      <p w-font="game" w-text="[#686eff]  2xl right <md:center" w-m="b-10">
-        <span w-text="[#f8ae16]">E</span>xperiences
-      </p>
-      <div w-m=" x-auto" w-container="~">
-        <ul>
-          <li>
-            <p w-font="game">Work</p>
-            <div>
-              <p>
-                Nutrition Court <span>2021.12 ~</span>
-              </p>
-              <p>맞춤형 스마트헬스케어 서비스</p>
-              <p>프론트엔드 개발자로 근무</p>
-            </div>
-            <ImageSlider data={work} />
-          </li>
-          <li>
-            <p w-font="game">Personal</p>
-            <div>
-              <p>
-                Code Camp <span>2021. 07 ~ 2021. 09</span>
-              </p>
-              <p>맞춤형 스마트헬스케어 서비스</p>
-              <p>
-                Vanilla JS, React, Next.js, 간단한 Typescript, API 통신 사용법
-                등 공부
-              </p>
-            </div>
-            <ImageSlider data={personal} />
-          </li>
-        </ul>
+    <section w-h="100vh" id="experiences" w-bg="[#ffff]">
+      <div
+        w-p="x-20 t-15 <lg:x-10"
+        w-container="~"
+        w-m="x-auto"
+        w-flex="~ col"
+        w-justify="center"
+      >
+        <p w-font="game" w-text="[#686eff]  2xl left <md:center" w-m="b-10">
+          <span w-text="[#f8ae16]">E</span>xperiences
+        </p>
+        <div w-m=" x-auto" w-container="~">
+          <ul>
+            <li>
+              <p w-font="game">Work</p>
+              <div>
+                <p>
+                  Nutrition Court <span>2021.12 ~</span>
+                </p>
+                <p>맞춤형 스마트헬스케어 서비스</p>
+                <p>프론트엔드 개발자로 근무</p>
+              </div>
+              <ImageSlider data={work} />
+            </li>
+            <li>
+              <p w-font="game">Personal</p>
+              <div>
+                <p>
+                  Code Camp <span>2021. 07 ~ 2021. 09</span>
+                </p>
+                <p>맞춤형 스마트헬스케어 서비스</p>
+                <p>
+                  Vanilla JS, React, Next.js, 간단한 Typescript, API 통신 사용법
+                  등 공부
+                </p>
+              </div>
+              <ImageSlider data={personal} />
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );

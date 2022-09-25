@@ -13,7 +13,6 @@ a {
 
 * {
   box-sizing: border-box;
-  color: white;
 }
 
 @font-face {
@@ -32,7 +31,7 @@ a {
 
 .background {
   /* background: linear-gradient(-45deg, #1d2c41, #bf0101, #f86449, #22131a); */
-  background-color: #292734;
+  background-color: #e5e8ec;
   background-size: 400% 400%;
   position: relative;
   animation: backroundCahnge 20s ease-in-out infinite;
@@ -71,8 +70,6 @@ a {
 .animate_text {
   overflow: hidden;
   height: 60px;
-  background-color: #ffe841;
-  width: fit-content;
 }
 .line {
   line-height: 60px;
@@ -103,29 +100,6 @@ a {
   100% {
     margin-top: -5px;
   }
-}
-
-.speech-bubble {
-  position: relative;
-  background: #ffffff;
-  border-radius: 0.4em;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-.speech-bubble:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 0;
-  height: 0;
-  border: 54px solid transparent;
-  border-right-color: #ffffff;
-  border-left: 0;
-  border-top: 0;
-  margin-top: 2px;
-  margin-left: -54px;
 }
 
 .speech-bubble2 {

@@ -14,6 +14,11 @@ export default defineConfig({
         game: "game",
         sans: "SLEIGothicTTF",
       },
+      colors: {
+        myellow: "#f8ae16",
+        mred: "#f90057",
+        mblue: "#686eff",
+      },
     },
   },
 });
