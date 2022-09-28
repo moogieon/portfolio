@@ -5,7 +5,7 @@ interface Props {
 }
 const Header: NextPage<Props> = ({ headerMenu }) => {
   const nav = [
-    { name: "AboutMe", href: "#about" },
+    { name: "About", href: "#about" },
     { name: "Skill", href: "#skills" },
     { name: "Experiences", href: "#experiences" },
   ];
@@ -26,23 +26,26 @@ const Header: NextPage<Props> = ({ headerMenu }) => {
     <div
       w-opacity="0"
       w-flex="~ row"
+      w-w="full"
+      w-p="x-10 y-3"
       w-items="<md:center"
-      w-justify="<md:center"
+      w-justify="<md:between"
       w-gap="5"
-      w-pos="fixed left-10 top-5"
+      w-pos="fixed"
       w-z="10"
+      w-backdrop="~ blur-md brightness-120"
       w-transition="~ duration-200"
       ref={headerMenu}
     >
       <h1
         w-cursor="pointer"
-        w-font="game "
-        w-text="mred left 2xl hover:[#1c1d49]"
+        w-font="game bold"
+        w-text=" [#213455] left 2xl hover:[#152136]"
         w-transition="~ duration-150"
         onClick={scrollToTop}
       >
         Mook
-        <p w-text="xs [#f8ae16] ">Frontend Developer</p>
+        <p w-text="xs mpink">Frontend Developer</p>
       </h1>
       <ul
         w-h="auto"
@@ -59,7 +62,7 @@ const Header: NextPage<Props> = ({ headerMenu }) => {
               w-pos="relative"
               w-transition="duration-75"
               w-cursor="pointer"
-              w-text="white"
+              w-text="[#152136]"
               className="hover-underline-animation"
             >
               <a href={data.href} onClick={handleLinkClick(data.href)}>

@@ -25,12 +25,12 @@ const LandingPage: NextPage<Props> = ({ landing, headerMenu }) => {
   }, []);
 
   const nav = [
-    { name: "AboutMe", href: "#about", style: "text-white bg-[#f90057]" },
+    { name: "AboutMe", href: "#about", style: "text-white bg-mpink" },
 
     {
       name: "Experiences",
       href: "#experiences",
-      style: "text-[#f90057] bg-[#e5e8ec]",
+      style: "text-mpink bg-[#e5e8ec]",
     },
   ];
 
@@ -57,11 +57,11 @@ const LandingPage: NextPage<Props> = ({ landing, headerMenu }) => {
         preserveAspectRatio="none"
         w-pos="absolute inset-0"
         w-w="full"
-        w-h="500px <md:6/10"
+        w-h="full <md:6/10"
       >
         <path
-          d="M0.00,92.27 C216.83,192.92 304.30,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z"
-          style={{ stroke: "none", fill: "#f90057" }}
+          d="M0.00,92.27 C116.83,202.92 400.30,70.39 500.00,129.3 L500.00,0.00 L0.00,0.00 Z"
+          style={{ stroke: "none", fill: "#335288" }}
         ></path>
       </svg>
       <div
@@ -69,11 +69,11 @@ const LandingPage: NextPage<Props> = ({ landing, headerMenu }) => {
         w-w="full"
         w-h="full"
         w-container="~"
-        w-m="x-auto t-60 <md:t-75"
+        w-m="x-auto t-60 <md:t-10"
         w-p="x-20 b-20 <lg:x-10"
-        w-flex="~ row"
-        w-justify="around <md:center"
-        w-items="end"
+        w-flex="~ row <md:col"
+        w-justify="around <md:start"
+        w-items="end <md:center"
       >
         <div w-h="full" w-flex="~ col" w-justify="center">
           <div
@@ -93,26 +93,25 @@ const LandingPage: NextPage<Props> = ({ landing, headerMenu }) => {
         >
           <div>
             <ul className="animate_text">
-              <li className="line" w-text="mred">
+              <li className="line" w-text="mpink">
                 호기심 많은
               </li>
-              <li className="line" w-text="mred">
+              <li className="line" w-text="mpink">
                 도전하는
               </li>
-              <li className="line" w-text="mred">
+              <li className="line" w-text="mpink">
                 성장이 고픈
               </li>
-              <li className="line" w-text="mred">
+              <li className="line" w-text="mpink">
                 엉덩이가 무거운
               </li>
             </ul>
             <p
-              w-text="black 6xl <lg:4xl "
+              w-text="6xl <lg:4xl "
               w-transition="duration-200"
               w-font="leading-20"
             >
-              프론트엔드 <br w-display="md:hidden" />
-              개발자
+              프론트엔드 개발자
             </p>
           </div>
           <ul
@@ -120,7 +119,7 @@ const LandingPage: NextPage<Props> = ({ landing, headerMenu }) => {
             w-flex="~ row"
             w-items="md:center"
             w-justify="<md:between"
-            w-gap="10"
+            w-gap="10 <md:5"
             w-m="t-10"
             w-transition="duration-200 delay-75"
           >

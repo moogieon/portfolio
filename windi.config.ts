@@ -17,7 +17,9 @@ export default defineConfig({
       colors: {
         myellow: "#f8ae16",
         mred: "#f90057",
-        mblue: "#686eff",
+        mblue: "#335288",
+        mwhite: "#e5e8ec",
+        mpink: "#ff9b8e",
       },
     },
   },

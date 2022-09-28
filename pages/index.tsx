@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   const landing = useRef<any>(null);
   return (
     <>
-      <div w-h="full" className="background">
+      <div w-h="full" w-w="full" className="background">
         <div w-pos="relative">
           <Header headerMenu={headerMenu} />
           <LandingPage landing={landing} headerMenu={headerMenu} />
