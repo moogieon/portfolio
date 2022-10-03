@@ -123,24 +123,23 @@ const LandingPage: NextPage<Props> = ({ landing, headerMenu }) => {
             w-m="t-10"
             w-transition="duration-200 delay-75"
           >
-            {nav.map((data) => (
-              <>
-                <li
-                  className={data.style}
-                  w-border="rounded-lg"
-                  w-shadow="lg"
-                  w-p="x-3 y-2"
-                  w-w="auto"
-                  w-pos="relative"
-                  w-transition="duration-75"
-                  w-cursor="pointer"
-                  w-text=" lg"
-                >
-                  <a href={data.href} onClick={handleLinkClick(data.href)}>
-                    {data.name}
-                  </a>
-                </li>
-              </>
+            {nav.map((data, idx) => (
+              <li
+                key={data.name}
+                className={data.style}
+                w-border="rounded-lg"
+                w-shadow="lg"
+                w-p="x-3 y-2"
+                w-w="auto"
+                w-pos="relative"
+                w-transition="duration-75"
+                w-cursor="pointer"
+                w-text=" lg"
+              >
+                <a href={data.href} onClick={handleLinkClick(data.href)}>
+                  {data.name}
+                </a>
+              </li>
             ))}
           </ul>
         </div>

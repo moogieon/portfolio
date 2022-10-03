@@ -104,7 +104,7 @@ const AboutMe: NextPage = () => {
                 <span w-text="mblue stroke-md stroke-mpink">5.</span>{" "}
                 도전,성장에 목말라 있습니다!
               </div>
-              <div w-h="full" w-p="2">
+              <div w-h="full" w-p="2" w-text="left">
                 어떠한 일이든 결국은 오래 버티고 노력하는 자가 완성된 결과물을
                 만든다고 생각합니다.
                 <br />

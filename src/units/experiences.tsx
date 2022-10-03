@@ -8,16 +8,64 @@ import heygo from "../../styles/personal/heygo.png";
 
 const Experiences: NextPage = () => {
   const work = [
-    { name: "뉴트리션코트", src: nutri },
-    { name: "웰코치", src: welcoah },
-    { name: "웰코치 히어로", src: hero },
-    { name: "웰코치샵", src: shop },
+    {
+      name: "뉴트리션코트",
+      src: nutri,
+      info: "뉴트리션코트 회사 소개 사이트",
+      skill: ["Gatsby", "CSS", "WindiCss", "MarkDown"],
+    },
+    {
+      name: "웰코치",
+      src: welcoah,
+      info: "혈액 분석 맞춤형 헬스케어 웰코치앱 소개 사이트",
+      skill: ["Svelte", "CSS", "Astro", "Vite", "Windicss"],
+    },
+    {
+      name: "웰코치 히어로",
+      src: hero,
+      info: "한인 대상의 헬스케어 웰코치샵 소개 사이트",
+      skill: ["Astro", "CSS", "WindiCss"],
+    },
+    {
+      name: "웰코치샵",
+      src: shop,
+      info: "건강 기능 식품, 건강검진 판매 및 검진 결과를 알려 주는 헬스케어 쇼핑몰",
+      skill: [
+        "Shopify",
+        "CSS",
+        "WindiCss",
+        "React18",
+        "graphql",
+        "Relay",
+        "graphql-request",
+      ],
+    },
   ];
   const personal = [
-    { name: "중고나라", src: heygo },
-    { name: "헤이고", src: heygo },
-    { name: "깃 이슈 트래커", src: heygo },
-    { name: "깃 블로그", src: heygo },
+    {
+      name: "중고나라",
+      src: heygo,
+      info: "",
+      skill: ["Next", "CSS", "Emotion", "graphql", "ApolloClient"],
+    },
+    {
+      name: "헤이고",
+      src: heygo,
+      info: "",
+      skill: ["ReactNative", "Emotion", "graphql", "ApolloClient"],
+    },
+    {
+      name: "깃 이슈 트래커",
+      src: heygo,
+      info: "",
+      skill: ["React18", "graphql", "Relay", "CSS", "WindiCss"],
+    },
+    {
+      name: "깃 블로그",
+      src: heygo,
+      info: "",
+      skill: ["Gatsby", "CSS", "TailwindCss", "MarkDown", "gh-pages"],
+    },
   ];
   return (
     <>
@@ -55,27 +103,34 @@ const Experiences: NextPage = () => {
             <span w-text="mpink">E</span>xperiences
           </p>
           <div
-            w-flex="~ row <md:col"
-            w-gap="<md:5"
-            w-justify="around <md:start"
+            w-flex="~ col"
+            w-gap="5"
+            w-justify="<md:start"
             w-p="t-40 b-10 <md:t-20"
           >
             <div>
-              <p w-text="xl" w-font="bold">
-                Nutrition Court <span>2021.12 ~</span>
-              </p>
-              <p>맞춤형 스마트헬스케어 서비스</p>
-              <p>프론트엔드 개발자로 근무</p>
-            </div>
-            <div>
-              <p w-text="xl" w-font="bold">
-                Code Camp <span>2021. 07 ~ 2021. 09</span>
-              </p>
+              <div w-text="xl" w-font="bold">
+                <p w-font="game" w-bg="mpink" w-w="max-content" w-p="x-2 y-1">
+                  <span>Code</span> Camp
+                </p>
+                <p w-text="mpink"> 2021. 07 ~ 2021. 09</p>
+              </div>
               <p>코딩 부트캠프 교육 프로그램</p>
               <p>
                 Vanilla JS, React, Next.js, 간단한 Typescript, API 통신 사용법
                 등 공부
               </p>
+            </div>
+            <div>
+              <div w-text="xl" w-font="bold">
+                <p w-font="game" w-bg="mpink" w-w="max-content" w-p="x-2 y-1">
+                  <span>Nutrition</span> Court
+                </p>
+
+                <p w-text="mpink"> 2021.12 ~</p>
+              </div>
+              <p>맞춤형 스마트헬스케어 서비스</p>
+              <p>프론트엔드 개발자로 근무</p>
             </div>
           </div>
           <div w-m="x-auto" w-container="~">

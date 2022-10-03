@@ -3,7 +3,7 @@ import { MutableRefObject } from "react";
 interface Props {
   headerMenu: MutableRefObject<any>;
 }
-const Header: NextPage<Props> = ({ headerMenu }) => {
+const Navgation: NextPage<Props> = ({ headerMenu }) => {
   const nav = [
     { name: "About", href: "#about" },
     { name: "Skill", href: "#skills" },
@@ -56,23 +56,22 @@ const Header: NextPage<Props> = ({ headerMenu }) => {
         w-transition="duration-200 delay-75"
       >
         {nav.map((data) => (
-          <>
-            <li
-              w-w="auto"
-              w-pos="relative"
-              w-transition="duration-75"
-              w-cursor="pointer"
-              w-text="[#152136]"
-              className="hover-underline-animation"
-            >
-              <a href={data.href} onClick={handleLinkClick(data.href)}>
-                {data.name}
-              </a>
-            </li>
-          </>
+          <li
+            key={data.name}
+            w-w="auto"
+            w-pos="relative"
+            w-transition="duration-75"
+            w-cursor="pointer"
+            w-text="[#152136]"
+            className="hover-underline-animation"
+          >
+            <a href={data.href} onClick={handleLinkClick(data.href)}>
+              {data.name}
+            </a>
+          </li>
         ))}
       </ul>
     </div>
   );
 };
-export default Header;
+export default Navgation;
