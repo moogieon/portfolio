@@ -8,6 +8,7 @@ const Navgation: NextPage<Props> = ({ headerMenu }) => {
     { name: "About", href: "#about" },
     { name: "Skill", href: "#skills" },
     { name: "Experiences", href: "#experiences" },
+    { name: "Concat", href: "#concat" },
   ];
 
   const scrollToTop = () => {

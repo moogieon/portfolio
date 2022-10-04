@@ -6,6 +6,7 @@ import LandingPage from "../src/units/landingPage";
 import AboutMe from "../src/units/aboutMe";
 import Skills from "../src/units/skills";
 import Experiences from "../src/units/experiences";
+import Concat from "../src/units/concat";
 
 const Home: NextPage = () => {
   const [isopen, setIsOpen] = useState<boolean>(false);
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
           <AboutMe />
           <Skills />
           <Experiences />
+          <Concat />
         </div>
       </div>
     </>

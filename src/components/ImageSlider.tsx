@@ -14,6 +14,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { useState } from "react";
 
 interface Props {
   data: {
@@ -21,9 +22,16 @@ interface Props {
     src: StaticImageData;
     info: string;
     skill: string[];
+    detail: string;
+    do: string;
+    know: string;
+    git?: string;
+    live?: string;
   }[];
 }
 const ImageSlider: NextPage<Props> = ({ data }) => {
+  const [isOpen, setIsOPen] = useState(false);
+  const [info, setInfo] = useState({});
   const params = {
     direction: "horizontal",
     paginationClickable: true,
@@ -32,14 +40,24 @@ const ImageSlider: NextPage<Props> = ({ data }) => {
     loop: true,
   };
 
-  const onClickPage = () => {};
+  const onClickPage =
+    (res: {
+      name: string;
+      src: StaticImageData;
+      info: string;
+      skill: string[];
+    }) =>
+    () => {
+      setInfo(res);
+      setIsOPen(true);
+    };
   return (
     <>
-      {/* <Modal data={data} /> */}
+      {isOpen && <Modal data={info} setIsOPen={setIsOPen} />}
       <div
         w-flex="~"
         w-items="center"
-        w-h="full"
+        w-h="full "
         w-p="y-2"
         w-overflow="x-hidden"
       >
@@ -51,17 +69,17 @@ const ImageSlider: NextPage<Props> = ({ data }) => {
           loop={true}
           loopedSlides={2}
           pagination={{ clickable: true }}
-          // scrollbar={{ draggable: true }}
-          effect={"coverflow"}
+          // effect={"coverflow"}
+
           coverflowEffect={{
             rotate: 20,
             stretch: 0,
             depth: 100,
             modifier: 1,
-            slideShadows: true,
+            // slideShadows: true,
           }}
           breakpoints={{
-            480: {
+            760: {
               //slidesPerView: 2.2,
               slidesPerView: 2.2,
               spaceBetween: 50,
@@ -69,7 +87,7 @@ const ImageSlider: NextPage<Props> = ({ data }) => {
             },
             1024: {
               //slidesPerView: 2.2,
-              slidesPerView: 4,
+              slidesPerView: 3,
               spaceBetween: 50,
               centeredSlides: true,
             },
@@ -77,46 +95,58 @@ const ImageSlider: NextPage<Props> = ({ data }) => {
         >
           {data.map((res, idx) => (
             <SwiperSlide
-              w-border="rounded-xl 1px"
-              w-p="x-2 y-2"
               w-m="b-10"
+              w-border="rounded-xl"
               key={res.name}
+              onClick={onClickPage(res)}
             >
-              <div w-h="400px <lg:350px">
-                <div w-text="center lg" w-h="max-content">
-                  {res.name}
-                </div>
+              <div
+                w-h="200px <lg:180px"
+                w-p="l-4 r-2 y-2"
+                w-w="full"
+                w-pos="relative"
+                w-border="rounded-xl "
+                w-flex="~ col"
+                w-justify="end"
+                w-cursor="pointer"
+                // className="slider_section"
+              >
+                <Image
+                  src={res.src}
+                  alt={res.name}
+                  w-pos="absolute inset-0"
+                  w-border="rounded-xl "
+                  w-z="-1"
+                  layout="fill"
+                />
+
                 <div
-                  w-display="block"
-                  w-pos="relative"
-                  w-w="full"
-                  w-h="200px <md:100px "
+                  className="slider_section"
+                  w-p="l-4 r-2 b-2"
+                  w-border="rounded-xl "
+                  w-opacity="hover:100"
+                  w-transition="all duration-200"
                 >
-                  <Image
-                    src={res.src}
-                    alt={res.name}
-                    w-object="cotain"
-                    layout="fill"
-                  />
+                  <div
+                    w-text="base center"
+                    w-bg="mpink opacity-70"
+                    w-border="rounded-xl"
+                    w-flex="~"
+                    w-p="x-4"
+                    w-w="max-content"
+                  >
+                    <div w-text="center lg" w-h="max-content">
+                      {res.name}
+                    </div>
+                  </div>
+                  <div
+                    w-h="3/10 max-100px"
+                    w-text="14px space-pre-wrap"
+                    w-font="leading-6"
+                  >
+                    {res.info}
+                  </div>
                 </div>
-                <div w-h="3/10 max-150px">{res.info}</div>
-                {/* <ul w-flex="~ wrap" w-gap="3">
-                  {res.skill.map((data, idx) => (
-                    <li
-                      key={data}
-                      className={`${
-                        idx % 2 ? "bg-mpink" : "text-mpink bg-white"
-                      }`}
-                      w-text="center"
-                      w-w="max-content"
-                      w-p="x-1"
-                      w-border="rounded-xl"
-                    >
-                      {data}
-                    </li>
-                  ))}
-                </ul> */}
-                <div w-text="base center">자세히</div>
               </div>
             </SwiperSlide>
           ))}

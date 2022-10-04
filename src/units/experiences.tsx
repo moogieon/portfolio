@@ -3,8 +3,11 @@ import ImageSlider from "../components/ImageSlider";
 import nutri from "../../styles/works/nutri.png";
 import welcoah from "../../styles/works/welcoah.png";
 import hero from "../../styles/works/welcoahHero.png";
-import shop from "../../styles/works/welcoachShop1.png";
+import welcoahshop from "../../styles/works/welcoachShop1.png";
 import heygo from "../../styles/personal/heygo.png";
+import blog from "../../styles/personal/blog.png";
+import shop from "../../styles/personal/shop.png";
+import issue from "../../styles/personal/issue.png";
 
 const Experiences: NextPage = () => {
   const work = [
@@ -12,24 +15,40 @@ const Experiences: NextPage = () => {
       name: "뉴트리션코트",
       src: nutri,
       info: "뉴트리션코트 회사 소개 사이트",
+      detail: "",
+      do: "",
+      know: "",
+      live: "",
       skill: ["Gatsby", "CSS", "WindiCss", "MarkDown"],
     },
     {
       name: "웰코치",
       src: welcoah,
       info: "혈액 분석 맞춤형 헬스케어 웰코치앱 소개 사이트",
+      detail: "",
+      do: "",
+      know: "",
+      live: "",
       skill: ["Svelte", "CSS", "Astro", "Vite", "Windicss"],
     },
     {
       name: "웰코치 히어로",
       src: hero,
       info: "한인 대상의 헬스케어 웰코치샵 소개 사이트",
+      detail: "",
+      do: "",
+      know: "",
+      live: "",
       skill: ["Astro", "CSS", "WindiCss"],
     },
     {
       name: "웰코치샵",
-      src: shop,
-      info: "건강 기능 식품, 건강검진 판매 및 검진 결과를 알려 주는 헬스케어 쇼핑몰",
+      src: welcoahshop,
+      info: "건강 기능 식품 판매, 건강검진 서비스 및 검진 결과를 알려 주는 헬스케어 쇼핑몰",
+      detail: "",
+      do: "",
+      know: "",
+      live: "",
       skill: [
         "Shopify",
         "CSS",
@@ -44,26 +63,44 @@ const Experiences: NextPage = () => {
   const personal = [
     {
       name: "중고나라",
-      src: heygo,
-      info: "",
+      src: shop,
+      info: "CRUD가 구현된 게시판, 아임포트를 이용한\n간단한 결제 시스템까지 '중고 거래' 웹 서비스",
+      detail: "",
+      do: "",
+      know: "",
+      git: "",
+      live: "",
       skill: ["Next", "CSS", "Emotion", "graphql", "ApolloClient"],
     },
     {
       name: "헤이고",
       src: heygo,
-      info: "",
+      detail: "",
+      do: "",
+      know: "",
+      git: "https://github.com/moogieon/TravelApp",
+      info: "처음 도전한 앱,팀 프로젝트\n'리액트 네이티브'로 만든 '동행' 서비스 앱 서비스",
       skill: ["ReactNative", "Emotion", "graphql", "ApolloClient"],
     },
     {
       name: "깃 이슈 트래커",
-      src: heygo,
-      info: "",
+      src: issue,
+      detail: "",
+      do: "",
+      know: "",
+      git: "https://github.com/moogieon/vite-ssr-relay-template",
+      info: "relay를 배우고자 테스트한 'git issues 트래커'",
       skill: ["React18", "graphql", "Relay", "CSS", "WindiCss"],
     },
     {
       name: "깃 블로그",
-      src: heygo,
-      info: "",
+      src: blog,
+      detail: "",
+      do: "",
+      know: "",
+      git: "https://github.com/moogieon/my-blog",
+      live: "https://moogieon.github.io/",
+      info: "자유롭게 만든 개인 블로그",
       skill: ["Gatsby", "CSS", "TailwindCss", "MarkDown", "gh-pages"],
     },
   ];
@@ -110,39 +147,39 @@ const Experiences: NextPage = () => {
           >
             <div>
               <div w-text="xl" w-font="bold">
-                <p w-font="game" w-bg="mpink" w-w="max-content" w-p="x-2 y-1">
+                <p w-bg="mpink" w-w="max-content" w-p="x-2 y-1">
+                  <span>Nutrition</span> Court
+                </p>
+
+                <p w-text="mpink"> 2021.12 ~ 현재</p>
+              </div>
+              <p>-맞춤형 스마트헬스케어 서비스</p>
+              <p>-프론트엔드 개발자로 근무</p>
+            </div>
+            <div>
+              <div w-text="xl" w-font="bold">
+                <p w-bg="mpink" w-w="max-content" w-p="x-2 y-1">
                   <span>Code</span> Camp
                 </p>
                 <p w-text="mpink"> 2021. 07 ~ 2021. 09</p>
               </div>
-              <p>코딩 부트캠프 교육 프로그램</p>
+              <p>-코딩 부트캠프 교육 프로그램</p>
               <p>
-                Vanilla JS, React, Next.js, 간단한 Typescript, API 통신 사용법
+                -Vanilla JS, React, Next.js, 간단한 Typescript, API 통신 사용법
                 등 공부
               </p>
-            </div>
-            <div>
-              <div w-text="xl" w-font="bold">
-                <p w-font="game" w-bg="mpink" w-w="max-content" w-p="x-2 y-1">
-                  <span>Nutrition</span> Court
-                </p>
-
-                <p w-text="mpink"> 2021.12 ~</p>
-              </div>
-              <p>맞춤형 스마트헬스케어 서비스</p>
-              <p>프론트엔드 개발자로 근무</p>
             </div>
           </div>
           <div w-m="x-auto" w-container="~">
             <ul>
               <li>
-                <p w-font="game" w-text="2xl">
+                <p w-text="2xl underline underline-mpink  underline-offset-6 ">
                   Work
                 </p>
                 <ImageSlider data={work} />
               </li>
               <li>
-                <p w-font="game" w-text="2xl">
+                <p w-text="2xl underline underline-mpink  underline-offset-6">
                   Personal
                 </p>
                 <ImageSlider data={personal} />

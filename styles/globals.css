@@ -122,3 +122,20 @@ a {
   margin-left: 43px;
   margin-bottom: -21px;
 }
+
+.swiper-slide-visible {
+  border-radius: 0.75rem !important;
+}
+.swiper-slide-next {
+  border-radius: 0.75rem !important;
+}
+.slider_section {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to top, #102a57, transparent);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  width: 100%;
+}
