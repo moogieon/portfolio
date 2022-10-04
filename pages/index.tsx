@@ -12,6 +12,12 @@ const Home: NextPage = () => {
   const [isopen, setIsOpen] = useState<boolean>(false);
   const headerMenu = useRef<any>(null);
   const landing = useRef<any>(null);
+  const handleLinkClick = (href: string) => (e: React.MouseEvent) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <div w-h="full" w-w="full" className="background">
@@ -22,6 +28,21 @@ const Home: NextPage = () => {
           <Skills />
           <Experiences />
           <Concat />
+          <a
+            href="#concat"
+            onClick={handleLinkClick("#concat")}
+            w-pos="fixed right-10 bottom-20"
+            w-border="rounded-1/2"
+            w-outline="~ 1 solid-mpink  hover:4"
+            w-transition="all duration-100"
+            w-cursor="pointer"
+            w-bg="mpink"
+            w-p="x-2 y-5"
+            w-z="10"
+            w-text="center"
+          >
+            Contact
+          </a>
         </div>
       </div>
     </>

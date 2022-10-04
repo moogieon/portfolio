@@ -8,22 +8,28 @@ interface Props {
     src?: StaticImageData;
     info?: string;
     detail?: string;
-    do?: string;
-    know?: string;
+    do?: string[];
+    know?: string[];
     git?: string;
     live?: string;
     skill?: string[] | number[];
   };
-
+  isOpen: boolean;
   setIsOPen: Dispatch<SetStateAction<boolean>>;
 }
-const Modal: NextPage<Props> = ({ data, setIsOPen }) => {
+const Modal: NextPage<Props> = ({ data, setIsOPen, isOpen }) => {
   const closeModal = () => {
     setIsOPen(false);
-    document.body.style.overflow = "unset";
+    const scrollY = document.body.style.top;
+    document.body.style.cssText = "";
+    window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
   };
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    document.body.style.cssText = `
+    position: fixed; 
+    top: -${window.scrollY}px;
+    overflow-y: scroll;
+    width: 100%;`;
   }, []);
   return (
     <div
@@ -33,20 +39,23 @@ const Modal: NextPage<Props> = ({ data, setIsOPen }) => {
       w-w="full"
       w-h="full"
       w-overflow="y-scroll"
-      w-p="20"
+      w-p="20 <md:10"
+      w-transition="all duration-200 delay-200"
+      className={`${isOpen ? "opacity-100" : "opacity-0"}`}
     >
       <div>
         <div
           w-w="full"
-          w-h="full min-500px"
+          w-h="full min-500px <md:min-700px"
           w-pos="relative"
           w-bg="mblue"
-          w-p="x-10 y-5"
+          w-p="x-10 y-5 <md:x-5"
           w-flex="~ col"
           w-justify="between"
+          w-gap="5"
         >
           <BsXLg
-            w-pos="absolute right-10 top-5"
+            w-pos="absolute right-10 top-5 <md:right-5"
             w-text="2xl"
             w-cursor="pointer"
             onClick={closeModal}
@@ -54,13 +63,25 @@ const Modal: NextPage<Props> = ({ data, setIsOPen }) => {
           <div w-text="2xl">{data?.name}</div>
           <div>
             <span w-text="xl">💁 정보</span>
-            <div>{data?.info}</div>
+            <div>{data.detail}</div>
           </div>
           <div>
-            <span w-text="xl">활동 내용</span>
+            <span w-text="xl" w-font="">
+              🏃‍♂️ 활동 내용
+            </span>
+            <ul w-list="circle " w-p="l-5">
+              {data?.do?.map((ido) => (
+                <li key={ido}>{ido}</li>
+              ))}
+            </ul>
           </div>
           <div>
             <span w-text="xl">💡 깨달은 점</span>
+            <ul w-list="circle" w-p="l-5">
+              {data?.know?.map((iknow) => (
+                <li key={iknow}>{iknow}</li>
+              ))}
+            </ul>
           </div>
           <ul w-flex="~ wrap" w-gap="3">
             {data?.skill?.map((res, idx) => (
@@ -76,13 +97,23 @@ const Modal: NextPage<Props> = ({ data, setIsOPen }) => {
               </li>
             ))}
           </ul>
-          <div w-flex="~ row" w-items="center" w-text="xl">
+          <div
+            w-flex="~ row"
+            w-items="center"
+            w-justify="center"
+            w-gap="5"
+            w-text="2xl"
+          >
             {data.git && (
               <a href={data?.git}>
-                <BsGithub />
+                <BsGithub w-svg="hover:stroke-1 hover:stroke-mpink" />
               </a>
             )}
-            {data.live && <a href={data?.live}>Live</a>}
+            {data.live && (
+              <a href={data?.live} w-text="hover:mpink" w-border="rounded-lg">
+                Live
+              </a>
+            )}
           </div>
         </div>
       </div>

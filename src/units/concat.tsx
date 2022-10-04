@@ -22,16 +22,52 @@ const Concat: NextPage = () => {
             style={{ stroke: "none", fill: "#335288" }}
           ></path>
         </svg>
-        <p w-font="game " w-text="left white 3xl <md:center" w-z="1">
-          <span w-text="mpink">C</span>oncat<span w-text="mpink">M</span>e
-        </p>
+        <div w-font="game " w-text="left white 3xl <md:center" w-z="1">
+          <span w-text="mpink">C</span>ontact
+          <span w-text="mpink"> M</span>e
+        </div>
         <div
           w-container="~"
           w-m="auto"
-          w-flex="~"
-          w-justify="center"
+          w-h="full"
+          w-flex="~ col"
+          w-justify="between"
+          w-gap="5"
           w-p="t-40 <md:t-25"
-        ></div>
+        >
+          <div>
+            <input
+              placeholder="이름"
+              w-text="black"
+              w-p="x-2 y-1"
+              w-w="full"
+              w-border="rounded-xl"
+            />
+          </div>
+          <div>
+            <input
+              type="email"
+              placeholder="E-mail"
+              w-text="black"
+              w-p="x-2 y-1"
+              w-w="full"
+              w-border="rounded-xl"
+            />
+          </div>
+          <div>
+            <textarea
+              placeholder="내용"
+              w-text="black"
+              w-p="x-2 y-1"
+              w-w="full"
+              w-h="min-200px"
+              w-border="rounded-xl"
+            />
+          </div>
+          <button w-m="x-auto" w-p="x-6 y-1" w-border="rounded-xl" w-bg="mblue">
+            전송
+          </button>
+        </div>
       </div>
     </section>
   );

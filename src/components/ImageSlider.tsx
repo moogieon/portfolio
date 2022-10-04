@@ -23,8 +23,8 @@ interface Props {
     info: string;
     skill: string[];
     detail: string;
-    do: string;
-    know: string;
+    do: string[];
+    know: string[];
     git?: string;
     live?: string;
   }[];
@@ -53,7 +53,7 @@ const ImageSlider: NextPage<Props> = ({ data }) => {
     };
   return (
     <>
-      {isOpen && <Modal data={info} setIsOPen={setIsOPen} />}
+      {isOpen && <Modal data={info} setIsOPen={setIsOPen} isOpen={isOpen} />}
       <div
         w-flex="~"
         w-items="center"
