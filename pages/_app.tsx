@@ -2,14 +2,22 @@ import type { AppProps } from "next/app";
 import "../styles/globals.css";
 import "windi.css";
 import Head from "next/head";
-
+import image from "../styles/Avatar.png";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
         <title>Frontend Dev, cmLee</title>
+        <meta
+          name="description"
+          content={"엉덩이가 무거운 프론트엔드 개발자"}
+        />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content={"포토폴리오"} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={"https://www.moogieon.site/"} />
+        <meta property="og:image" content={"/metaImg.png"} />
         <link rel="shortcut icon" href="/favi/favicon.ico" />
-
         <link
           rel="apple-touch-icon"
           sizes="57x57"
