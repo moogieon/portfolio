@@ -1,6 +1,33 @@
 import type { NextPage } from "next";
-
+import { useRef, useState, FormEvent, MutableRefObject } from "react";
+import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 const Concat: NextPage = () => {
+  const [token, setToken] = useState(false);
+  const form = useRef() as MutableRefObject<HTMLFormElement>;
+
+  const submitFormAndShowCaptcha = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setToken(true);
+  };
+  const sendEmail = () => {
+    emailjs
+      .sendForm(
+        "service_5a6suvo",
+        "template_g32fg9g",
+        form.current,
+        "P8-NqNrQDPedLB2nB"
+      )
+      .then(
+        (result) => {
+          setToken(false);
+          alert("전송이 완료 되었습니다.\n감사합니다 ^^");
+        },
+        (error) => {
+          alert(error.text);
+        }
+      );
+  };
   return (
     <section w-h="min-100vh full" id="concat" w-pos="relative">
       <div
@@ -26,48 +53,69 @@ const Concat: NextPage = () => {
           <span w-text="mpink">C</span>ontact
           <span w-text="mpink"> M</span>e
         </div>
-        <div
-          w-container="~"
-          w-m="auto"
-          w-h="full"
-          w-flex="~ col"
-          w-justify="between"
-          w-gap="5"
-          w-p="t-40 <md:t-25"
-        >
-          <div>
-            <input
-              placeholder="이름"
-              w-text="black"
-              w-p="x-2 y-1"
-              w-w="full"
-              w-border="rounded-xl"
-            />
+        <form ref={form} onSubmit={submitFormAndShowCaptcha}>
+          <div
+            w-container="~"
+            w-m="auto"
+            w-h="full"
+            w-flex="~ col"
+            w-justify="between"
+            w-gap="5"
+            w-p="t-40 <md:t-25"
+          >
+            <div>
+              <input
+                placeholder="이름, 제목"
+                name="name"
+                w-text="black"
+                w-p="x-2 y-1"
+                w-w="full"
+                w-border="rounded-xl"
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                w-text="black"
+                w-p="x-2 y-1"
+                w-w="full"
+                w-border="rounded-xl"
+              />
+            </div>
+            <div>
+              <textarea
+                placeholder="내용"
+                name="message"
+                w-text="black"
+                w-p="x-2 y-1"
+                w-w="full"
+                w-h="min-200px"
+                w-border="rounded-xl"
+              />
+            </div>
+
+            {token ? (
+              <ReCAPTCHA
+                w-m="x-auto"
+                sitekey={"6LdNg1YiAAAAAElJIVki280y9SV_MsZpje1GodUi"}
+                onChange={sendEmail}
+              />
+            ) : (
+              <button
+                type="submit"
+                w-m="x-auto"
+                value="Send"
+                w-p="x-6 y-1"
+                w-border="rounded-xl"
+                w-bg="mblue"
+              >
+                전송
+              </button>
+            )}
           </div>
-          <div>
-            <input
-              type="email"
-              placeholder="E-mail"
-              w-text="black"
-              w-p="x-2 y-1"
-              w-w="full"
-              w-border="rounded-xl"
-            />
-          </div>
-          <div>
-            <textarea
-              placeholder="내용"
-              w-text="black"
-              w-p="x-2 y-1"
-              w-w="full"
-              w-h="min-200px"
-              w-border="rounded-xl"
-            />
-          </div>
-          <button w-m="x-auto" w-p="x-6 y-1" w-border="rounded-xl" w-bg="mblue">
-            전송
-          </button>
-        </div>
+        </form>
       </div>
     </section>
   );
