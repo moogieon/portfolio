@@ -2,7 +2,7 @@ import type { AppProps } from "next/app";
 import "../styles/globals.css";
 import "windi.css";
 import Head from "next/head";
-import image from "../styles/Avatar.png";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
