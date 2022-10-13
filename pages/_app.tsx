@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           content={"엉덩이가 무거운 프론트엔드 개발자"}
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta property="og:title" content={"포토폴리오"} />
+        <meta property="og:title" content={"cmLee의 포토폴리오"} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={"https://www.moogieon.site/"} />
         <meta property="og:image" content={"/metaImg.png"} />
