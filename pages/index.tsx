@@ -32,7 +32,7 @@ const Home: NextPage = () => {
             href="#concat"
             onClick={handleLinkClick("#concat")}
             w-pos="fixed right-10 bottom-20"
-            w-border="rounded-1/2"
+            w-border="none rounded-1/2"
             w-outline="~ 1 solid-mpink  hover:4"
             w-transition="all duration-100"
             w-cursor="pointer"
