@@ -45,7 +45,7 @@ const AboutMe: NextPage = () => {
         <svg
           viewBox="0 0 500 150"
           preserveAspectRatio="none"
-          w-pos="absolute inset-0"
+          w-pos="absolute inset-0 -top-1px"
           w-w="full"
           w-h="3/10 <md:230px"
         >
