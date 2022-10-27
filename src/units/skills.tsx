@@ -88,10 +88,6 @@ const Skills: NextPage = () => {
               <p w-text="mblue">Gatsby</p>
             </div>
             <div w-flex="~ col" w-items="center">
-              <SiSvelte w-svg="fill-mblue" w-w="full" w-h="100px <md:70px" />
-              <p w-text="mblue">Svelte</p>
-            </div>
-            <div w-flex="~ col" w-items="center">
               <div w-w="max-100px <md:70px" w-h="max-100px <md:70px">
                 <Image src={Astro} alt="astroImage" />
               </div>
