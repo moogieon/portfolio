@@ -90,8 +90,8 @@ const Modal: NextPage<Props> = ({ data, setIsOPen, isOpen }) => {
                 className={`${idx % 2 ? "bg-mpink" : "text-mpink bg-white"}`}
                 w-text="center"
                 w-w="max-content"
-                w-p="x-1"
-                w-border="rounded-xl"
+                w-p="1"
+                w-border="rounded-2xl"
               >
                 {res}
               </li>

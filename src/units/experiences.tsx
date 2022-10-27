@@ -63,11 +63,12 @@ const Experiences: NextPage = () => {
       detail:
         "쇼피파이를 이용한 쉽고 빠르게 해외 이커머스의 장점과 내부 서버와 페이지를 이용한 헬스케어 쇼핑몰",
       do: [
-        "Liquid 이용한 마이페이지 레이아웃 작업",
+        "Liquid 이용한 쇼핑몰 마이페이지 레이아웃 작업",
         "쇼피파이 api 와 graphql-request를 이용해 사내 api와 연결",
         "쇼피파이 로그인 정보와 와 사내 서버와 이중 인증 토큰 방식의 로그인 기능",
         "이중 인증 토큰 방식으로 React, Relay, Graphql을 이용한 검진 EREQ,반품 신청서 작성 페이지",
-        "React, Relay, Graphql을 이용한 건강검진 결과를 알려주는 리포트",
+        "React, Relay, Graphql을(를) 이용한 건강검진 결과를 알려주는 리포트",
+        "Shopify storefront API를 이용한 장바구니 기능",
       ],
       know: [
         "협업 할 때는 더블체크와 의사소통이 가장 중요하다.",
@@ -96,6 +97,7 @@ const Experiences: NextPage = () => {
         "대세는 중고거래! 구현하는 모든것이 처음이였던 CRUD 프로젝트 반응형, 최적화, 디테일한 기본기 까지 부족 했던 프로젝트",
       do: [
         "카테고리 컴포넌트 제작 및  카테고리 별 데이터 분류 구현",
+        "getStaticProps, getStaticPath를 이용한 SSG dynamic route",
         "데이터 조회 컴포넌트 구성",
         "게시글 작성 컴포넌트 구현",
         "react-hook-form과 yup을 사용한 성능 최적화 및 유효성 검사 구현",
