@@ -21,7 +21,7 @@ const Skills: NextPage = () => {
   return (
     <section w-h="min-100vh full" id="skills" w-pos="relative">
       <div
-        w-p="x-10 t-20 <lg:x-10"
+        w-p="x-10 t-22 <lg:x-10"
         w-container="~"
         w-m="x-auto"
         w-flex="~ col"

@@ -36,7 +36,7 @@ const AboutMe: NextPage = () => {
       id="about"
     >
       <div
-        w-p="x-10 t-20 <lg:x-10"
+        w-p="x-10 t-23 <lg:x-10"
         w-container="~"
         w-m="x-auto"
         w-flex="~ col"

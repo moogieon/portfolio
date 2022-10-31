@@ -209,7 +209,7 @@ const Experiences: NextPage = () => {
         w-bg="mblue"
       >
         <div
-          w-p="x-10 y-20 <lg:x-10"
+          w-p="x-10 y-23 <lg:x-10"
           w-container="~"
           w-m="x-auto"
           w-flex="~ col"
