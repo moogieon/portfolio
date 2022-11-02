@@ -67,8 +67,9 @@ const Experiences: NextPage = () => {
         "쇼피파이 api 와 graphql-request를 이용해 사내 api와 연결",
         "쇼피파이 로그인 정보와 와 사내 서버와 이중 인증 토큰 방식의 로그인 기능",
         "이중 인증 토큰 방식으로 React, Relay, Graphql을 이용한 검진 EREQ,반품 신청서 작성 페이지",
-        "React, Relay, Graphql을(를) 이용한 건강검진 결과를 알려주는 리포트",
+        "React, Relay, Graphql을(를) 이용한 건강검진 결과를 알려주는 i18n을 이용한 국문/영문 리포트",
         "Shopify storefront API를 이용한 장바구니 기능",
+        " 검진 국문 리포트 페이지",
       ],
       know: [
         "협업 할 때는 더블체크와 의사소통이 가장 중요하다.",
@@ -85,6 +86,7 @@ const Experiences: NextPage = () => {
         "graphql",
         "Relay",
         "graphql-request",
+        "i18n",
       ],
     },
   ];
