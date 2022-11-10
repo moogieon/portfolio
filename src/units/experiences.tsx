@@ -8,6 +8,8 @@ import heygo from "../../styles/personal/heygo.png";
 import blog from "../../styles/personal/blog.png";
 import shop from "../../styles/personal/shop.png";
 import issue from "../../styles/personal/issue.png";
+import partner from "../../styles/personal/partner.png";
+import todo from "../../styles/personal/todo.png";
 
 const Experiences: NextPage = () => {
   const work = [
@@ -151,6 +153,49 @@ const Experiences: NextPage = () => {
         "Emotion",
         "graphql",
         "ApolloClient",
+      ],
+    },
+    {
+      name: "파트너스",
+      src: partner,
+      info: "체크박스 필터링 기능 구현",
+      detail: "라이브러리 없이 만들어보는 여러가지 기능들",
+      do: [
+        "요청 목록 필터링 여집합",
+        " 요청 목록 토글 필터링",
+        "요청 목록 체크박스 필터링",
+        "반응형 햄버거 메뉴",
+      ],
+      know: [
+        "코드를 치다보니 어느새 100줄이 넘어가고 최대한 70줄 이상 되면 컴포넌트를 따로 빼려고 노력 헀다.",
+        "타입을 공부중이라 타입을 잡는데 생각을 많이 했다.",
+        "반응형은 처음이라 아직 반복적인 작업을 통해서 구현했다.",
+      ],
+      git: "https://github.com/moogieon/ATEAM-Challenge",
+      skill: ["React", "Typescript", "Emotion", "Axios"],
+    },
+    {
+      name: "내 투자일지",
+      src: todo,
+      info: "리액트 네이트브를 이용한 투자일지 기록",
+      detail: "투자 일지를 작성해서 투자 종목들의 수익율을 비교 해보자!",
+      do: [
+        "회원가입, Email, Password 를 입력해서 유저를 식별할 수 있는 JWT token을 받기",
+        "JWT token을 통한 인증으로 투자일지 목록, 투자일지 작성,삭제 기능",
+        "투자한 종목에는, 기존 종목 리스트들 투자종목들의 data를 비교해서 수익률 표시",
+      ],
+      know: [
+        "Promise all을 이용해 동시에 순차적인 서버 통신 방법",
+        "react native의 로컬 저장소 저장 방법",
+        "사용자가 경험해야 하는 약간의 지연이 항상 있으므로 유용한 로드 상태를 표시하는 것이 중요하다.",
+      ],
+      git: "https://github.com/moogieon/Investing-Diary-ReactNative-Test",
+      skill: [
+        "ReactNative",
+        "Typescript",
+        "Emotion",
+        "Axios",
+        "React.Asyncstorige",
       ],
     },
     {
