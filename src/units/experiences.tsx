@@ -4,6 +4,14 @@ import nutri from "../../styles/works/nutri.png";
 import welcoah from "../../styles/works/welcoah.png";
 import hero from "../../styles/works/welcoahHero.png";
 import welcoahshop from "../../styles/works/welcoachShop1.png";
+import myPage_1 from "../../styles/myPage/myPage_1.png";
+import myPage_2 from "../../styles/myPage/myPage_2.png";
+import myPage_3 from "../../styles/myPage/myPage_3.png";
+import welcoah_borad from "../../styles/works/welcoah_borad.png";
+import reportMain from "../../styles/works/reportMain.png";
+import report_1 from "../../styles/report/report_1.png";
+import report_2 from "../../styles/report/report_2.png";
+import report_3 from "../../styles/report/report_3.png";
 import heygo from "../../styles/personal/heygo.png";
 import blog from "../../styles/personal/blog.png";
 import shop from "../../styles/personal/shop.png";
@@ -90,6 +98,75 @@ const Experiences: NextPage = () => {
         "Relay",
         "graphql-request",
         "i18n",
+      ],
+      images: [
+        {
+          href: "https://github.com/moogieon/nestJS-test/assets/86825253/a32443ce-df15-464e-9ddf-8f35778269e2",
+          url: myPage_1,
+        },
+        {
+          href: "https://github.com/moogieon/nestJS-test/assets/86825253/ef896102-39ed-44f4-8c19-63a84c2bef94",
+          url: myPage_2,
+        },
+        {
+          href: "https://github.com/moogieon/nestJS-test/assets/86825253/58e331a4-2356-4ed9-873b-45188cf83e83",
+          url: myPage_3,
+        },
+      ],
+    },
+    {
+      name: "건강상담 게시판",
+      src: welcoah_borad,
+      info: "1대1 건강 상담을 받을 수 있는 게시판",
+      detail: "건강검진 결과, 건기식 상담을 받을 수 있는 게시판",
+      do: [
+        "CSS,HTML을 이용한 UI 작업",
+        "쇼피파이 api 와 graphql-request를 이용해 사내 api와 연결",
+        "사진 첨부 기능 기능",
+        "비밀글 활성화 기능",
+        "상담사와 소통 할 수 있는 댓글 기능 ",
+      ],
+      know: [
+        "협업 할 때는 더블체크와 의사소통이 가장 중요하다.",
+        "사용자를 고려하는 UI.UX의 중요성(댓글의 가독성, 첨부 파일 확인)",
+        "사용자 편의와 개인정보 보호를 위한 기능의 중요성(비밀글, 사진 첨부, 링크 첨부)",
+      ],
+      live: "https://shop.welcoach.com/pages/%EA%B1%B4%EA%B0%95%EC%83%81%EB%8B%B4",
+      skill: ["Shopify", "CSS", "graphql", "Relay", "graphql-request"],
+    },
+    {
+      name: "검진 리포트",
+      src: reportMain,
+      info: "건강검진 결과를 보여주는 리포트",
+      detail: "건강검진 결과, 건기식 추천을 받을 수 있는 리포트",
+      do: [
+        "React, windi css 을 이용한 UI 작업",
+        "React, Relay, Graphql을(를) 이용한 건강검진 결과를 알려주는 i18n을 이용한 국문/영문 리포트",
+        "Shopify storefront API를 이용한 장바구니 기능",
+        "쇼피파이 api 와 graphql-request를 이용해 사내 api와 연결해서 건기식 추천",
+        "원형 그래프를 이용한 요약 리포트",
+        "그래프를 이용해 알 수 있는 임상범위, 건강범위 그래프",
+      ],
+      know: [
+        "UI.UX의 중요성(기존 간단하게 디자인 된 리포트와, 리뉴얼 된 리포트의 선호도 차이)",
+        "백엔드 개발자와의 원활한 소통은 빠른 작업물을 만들 수 있다.(노션을 통한 커뮤니케이션)",
+        "바퀴를 재창조 하지말자(chart.js 같은 라이브러리를 적극 이용하자!)",
+        "chat GPT를 이용해서 코드를 짜면 시간이 단축된다!",
+      ],
+      skill: ["React", "windiCSS", "graphql", "Relay", "graphql-request"],
+      images: [
+        {
+          href: "https://github.com/moogieon/nestJS-test/assets/86825253/8e6bbf3b-d5b8-47f7-a79c-34e5d2b2717e",
+          url: report_1,
+        },
+        {
+          href: "https://github.com/moogieon/nestJS-test/assets/86825253/ca5d47d8-0503-4580-834d-e37d762b186b",
+          url: report_2,
+        },
+        {
+          href: "https://github.com/moogieon/nestJS-test/assets/86825253/bd26d4a2-23ce-441a-88b2-a57b6737346a",
+          url: report_3,
+        },
       ],
     },
   ];
@@ -295,9 +372,11 @@ const Experiences: NextPage = () => {
                   <span>Nutrition</span> Court
                 </p>
 
-                <p w-text="mpink"> 2021.12 ~ 2023.01</p>
+                <p w-text="mpink"> 2021.12 ~ 현재</p>
               </div>
               <p>-맞춤형 스마트헬스케어 서비스</p>
+              <p>-해외 이커머스 쇼핑몰 서비스</p>
+              <p>-건강검진을 통한 맞춤식 영양제 서비스</p>
               <p>-프론트엔드 개발자로 근무</p>
             </div>
             <div>
@@ -309,8 +388,7 @@ const Experiences: NextPage = () => {
               </div>
               <p>-코딩 부트캠프 교육 프로그램</p>
               <p>
-                -Vanilla JS, React, Next.js, 간단한 Typescript, API 통신 사용법
-                등 공부
+                -Vanilla JS, React, Next.js, Typescript, API 통신 사용법 등 공부
               </p>
             </div>
           </div>

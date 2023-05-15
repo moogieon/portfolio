@@ -23,10 +23,14 @@ interface Props {
     info: string;
     skill: string[];
     detail: string;
-    do: string[];
+    do: string[];  
     know: string[];
     git?: string;
     live?: string;
+    images?: {
+      href?: string;
+      url?: StaticImageData;
+    }[];
   }[];
 }
 const ImageSlider: NextPage<Props> = ({ data }) => {
@@ -46,6 +50,10 @@ const ImageSlider: NextPage<Props> = ({ data }) => {
       src: StaticImageData;
       info: string;
       skill: string[];
+      images?: {
+        href?: string;
+        url?: StaticImageData;
+      }[];
     }) =>
     () => {
       setInfo(res);

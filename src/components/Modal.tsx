@@ -1,6 +1,6 @@
 import { NextPage } from "next";
-import { StaticImageData } from "next/image";
-import { useEffect, Dispatch, SetStateAction } from "react";
+import Image, { StaticImageData } from "next/image";
+import { useEffect, Dispatch, SetStateAction, ImgHTMLAttributes } from "react";
 import { BsXLg, BsGithub } from "react-icons/bs";
 interface Props {
   data: {
@@ -13,6 +13,10 @@ interface Props {
     git?: string;
     live?: string;
     skill?: string[] | number[];
+    images?: {
+      href: string;
+      url: StaticImageData;
+    }[];
   };
   isOpen: boolean;
   setIsOPen: Dispatch<SetStateAction<boolean>>;
@@ -31,6 +35,7 @@ const Modal: NextPage<Props> = ({ data, setIsOPen, isOpen }) => {
     overflow-y: scroll;
     width: 100%;`;
   }, []);
+
   return (
     <div
       w-bg="black opacity-60"
@@ -94,6 +99,20 @@ const Modal: NextPage<Props> = ({ data, setIsOPen, isOpen }) => {
                 w-border="rounded-2xl"
               >
                 {res}
+              </li>
+            ))}
+          </ul>
+          <ul w-flex="~ row" w-gap="2">
+            {data?.images?.map((img, idx) => (
+              <li key={idx} w-pos="relative" w-w="200px <md:150px" w-h="150px <md:100px">
+                <a href={img.href} target="_blank" rel="noreferrer">
+                  <Image
+                    src={img.url}
+                    alt="example img"
+                    layout="fill"
+                    w-pos="absolute inset-0"
+                  />
+                </a>
               </li>
             ))}
           </ul>
