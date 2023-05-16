@@ -176,7 +176,7 @@ const Experiences: NextPage = () => {
       src: shop,
       info: "CRUD가 구현된 게시판, 아임포트를 이용한\n간단한 결제 시스템까지 '중고 거래' 웹 서비스",
       detail:
-        "대세는 중고거래! 구현하는 모든것이 처음이였던 CRUD 프로젝트 반응형, 최적화, 디테일한 기본기 까지 부족 했던 프로젝트",
+        "대세는 중고거래! 구현하는 모든것이 처음이였던 CRUD 프로젝트 반응형, 최적화, 디테일한 기본기 까지 부족 했던 첫 CRUD프로젝트",
       do: [
         "카테고리 컴포넌트 제작 및  카테고리 별 데이터 분류 구현",
         "getStaticProps, getStaticPath를 이용한 SSG dynamic route",
