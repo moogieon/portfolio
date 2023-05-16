@@ -93,8 +93,8 @@ const AboutMe: NextPage = () => {
                 동작원리를 이해하려고 합니다.
               </div>
               <div w-w="max-content" w-h="full" w-p="2">
-                <span w-text="mblue stroke-md stroke-mpink">3.</span> 휴먼
-                에러를 최소로 줄이려고 노력 합니다.
+                <span w-text="mblue stroke-md stroke-mpink">3.</span> 개발
+                트랜드를 따라잡기 위해 노력 합니다.
               </div>
               <div w-w="max-content" w-h="full" w-p="2">
                 <span w-text="mblue stroke-md stroke-mpink">4.</span> 현재
@@ -136,7 +136,7 @@ const AboutMe: NextPage = () => {
               </span>
               의 재미를 추구하는
               <br />
-              프론트엔드 개발자
+              2년차 프론트엔드 개발자
               <span w-font="bold" w-text="black xl">
                 {" "}
                 이창묵
