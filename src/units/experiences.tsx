@@ -146,6 +146,7 @@ const Experiences: NextPage = () => {
         "쇼피파이 api 와 graphql-request를 이용해 사내 api와 연결해서 건기식 추천",
         "원형 그래프를 이용한 요약 리포트",
         "그래프를 이용해 알 수 있는 임상범위, 건강범위 그래프",
+        "Recoil을 이용한 장바구니 전역관리"
       ],
       know: [
         "UI.UX의 중요성(기존 간단하게 디자인 된 리포트와, 리뉴얼 된 리포트의 선호도 차이)",
@@ -153,7 +154,7 @@ const Experiences: NextPage = () => {
         "바퀴를 재창조 하지말자(chart.js 같은 라이브러리를 적극 이용하자!)",
         "chat GPT를 이용해서 코드를 짜면 시간이 단축된다!",
       ],
-      skill: ["React", "windiCSS", "graphql", "Relay", "graphql-request"],
+      skill: ["React","Recoil","windiCSS", "graphql", "Relay", "graphql-request"],
       images: [
         {
           href: "https://github.com/moogieon/nestJS-test/assets/86825253/8e6bbf3b-d5b8-47f7-a79c-34e5d2b2717e",
