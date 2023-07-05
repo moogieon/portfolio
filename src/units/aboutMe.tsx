@@ -7,6 +7,7 @@ import { BsGithub } from "react-icons/bs";
 
 const AboutMe: NextPage = () => {
   const [active, setAcite] = useState(false);
+  const [urls, setUrls] = useState([]);
   const about = useRef<any>(null);
   useEffect(() => {
     const observer = new IntersectionObserver(

@@ -1,7 +1,8 @@
 import { NextPage } from "next";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import { useEffect, Dispatch, SetStateAction, ImgHTMLAttributes } from "react";
 import { BsXLg, BsGithub } from "react-icons/bs";
+import { Image, Card } from "antd";
 interface Props {
   data: {
     name?: string;
@@ -15,7 +16,7 @@ interface Props {
     skill?: string[] | number[];
     images?: {
       href: string;
-      url: StaticImageData;
+      url: string;
     }[];
   };
   isOpen: boolean;
@@ -35,7 +36,7 @@ const Modal: NextPage<Props> = ({ data, setIsOPen, isOpen }) => {
     overflow-y: scroll;
     width: 100%;`;
   }, []);
-
+  console.log(data);
   return (
     <div
       w-bg="black opacity-60"
@@ -45,7 +46,8 @@ const Modal: NextPage<Props> = ({ data, setIsOPen, isOpen }) => {
       w-h="full"
       w-overflow="y-scroll"
       w-p="20 <md:10"
-      w-transition="all duration-200 delay-200"
+      w-filter="~ drop-shadow"
+      w-animate="fade-in duration-200"
       className={`${isOpen ? "opacity-100" : "opacity-0"}`}
     >
       <div>
@@ -102,17 +104,22 @@ const Modal: NextPage<Props> = ({ data, setIsOPen, isOpen }) => {
               </li>
             ))}
           </ul>
-          <ul w-flex="~ row" w-gap="2">
+          <ul w-flex="~ row " w-gap="2">
             {data?.images?.map((img, idx) => (
-              <li key={idx} w-pos="relative" w-w="200px <md:150px" w-h="150px <md:100px">
-                <a href={img.href} target="_blank" rel="noreferrer">
+              <li
+                key={idx}
+                w-w="200px <md:150px"
+                w-h="150px <md:100px"
+                w-pos="relative"
+              >
+                <div w-h="150px <md:100px">
                   <Image
                     src={img.url}
                     alt="example img"
-                    layout="fill"
+                    w-h="max-150px <md:max-100px"
                     w-pos="absolute inset-0"
                   />
-                </a>
+                </div>
               </li>
             ))}
           </ul>

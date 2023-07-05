@@ -139,3 +139,7 @@ a {
   height: 50%;
   width: 100%;
 }
+
+.ant-image-img {
+  height: 100%;
+}

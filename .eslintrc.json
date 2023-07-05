@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "css/no-unknown-property": [
+    "error",
+    {
+      "ignoreProperties": [],
+      "ignorePrefixed": true
+    }
+  ]
 }

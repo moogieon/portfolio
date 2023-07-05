@@ -4,14 +4,14 @@ import nutri from "../../styles/works/nutri.png";
 import welcoah from "../../styles/works/welcoah.png";
 import hero from "../../styles/works/welcoahHero.png";
 import welcoahshop from "../../styles/works/welcoachShop1.png";
-import myPage_1 from "../../styles/myPage/myPage_1.png";
-import myPage_2 from "../../styles/myPage/myPage_2.png";
-import myPage_3 from "../../styles/myPage/myPage_3.png";
+import myPage_1 from "/myPage/myPage_1.png";
+import myPage_2 from "/myPage/myPage_2.png";
+import myPage_3 from "/myPage/myPage_3.png";
 import welcoah_borad from "../../styles/works/welcoah_borad.png";
 import reportMain from "../../styles/works/reportMain.png";
-import report_1 from "../../styles/report/report_1.png";
-import report_2 from "../../styles/report/report_2.png";
-import report_3 from "../../styles/report/report_3.png";
+import report_1 from "/report/report_1.png";
+import report_2 from "/report/report_2.png";
+import report_3 from "/report/report_3.png";
 import heygo from "../../styles/personal/heygo.png";
 import blog from "../../styles/personal/blog.png";
 import shop from "../../styles/personal/shop.png";
@@ -102,15 +102,15 @@ const Experiences: NextPage = () => {
       images: [
         {
           href: "https://github.com/moogieon/nestJS-test/assets/86825253/a32443ce-df15-464e-9ddf-8f35778269e2",
-          url: myPage_1,
+          url: "/myPage/myPage_1.png",
         },
         {
           href: "https://github.com/moogieon/nestJS-test/assets/86825253/ef896102-39ed-44f4-8c19-63a84c2bef94",
-          url: myPage_2,
+          url: "/myPage/myPage_2.png",
         },
         {
           href: "https://github.com/moogieon/nestJS-test/assets/86825253/58e331a4-2356-4ed9-873b-45188cf83e83",
-          url: myPage_3,
+          url: "/myPage/myPage_3.png",
         },
       ],
     },
@@ -146,7 +146,7 @@ const Experiences: NextPage = () => {
         "쇼피파이 api 와 graphql-request를 이용해 사내 api와 연결해서 건기식 추천",
         "원형 그래프를 이용한 요약 리포트",
         "그래프를 이용해 알 수 있는 임상범위, 건강범위 그래프",
-        "Recoil을 이용한 장바구니 전역관리"
+        "Recoil을 이용한 장바구니 전역관리",
       ],
       know: [
         "UI.UX의 중요성(기존 간단하게 디자인 된 리포트와, 리뉴얼 된 리포트의 선호도 차이)",
@@ -154,19 +154,26 @@ const Experiences: NextPage = () => {
         "바퀴를 재창조 하지말자(chart.js 같은 라이브러리를 적극 이용하자!)",
         "chat GPT를 이용해서 코드를 짜면 시간이 단축된다!",
       ],
-      skill: ["React","Recoil","windiCSS", "graphql", "Relay", "graphql-request"],
+      skill: [
+        "React",
+        "Recoil",
+        "windiCSS",
+        "graphql",
+        "Relay",
+        "graphql-request",
+      ],
       images: [
         {
           href: "https://github.com/moogieon/nestJS-test/assets/86825253/8e6bbf3b-d5b8-47f7-a79c-34e5d2b2717e",
-          url: report_1,
+          url: "/report/report_1.png",
         },
         {
           href: "https://github.com/moogieon/nestJS-test/assets/86825253/ca5d47d8-0503-4580-834d-e37d762b186b",
-          url: report_2,
+          url: "/report/report_2.png",
         },
         {
           href: "https://github.com/moogieon/nestJS-test/assets/86825253/bd26d4a2-23ce-441a-88b2-a57b6737346a",
-          url: report_3,
+          url: "/report/report_3.png",
         },
       ],
     },

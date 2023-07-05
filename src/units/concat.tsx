@@ -1,10 +1,48 @@
 import type { NextPage } from "next";
-import { useRef, useState, FormEvent, MutableRefObject } from "react";
+import {
+  useRef,
+  useState,
+  FormEvent,
+  MutableRefObject,
+  useEffect,
+} from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
 const Concat: NextPage = () => {
   const [token, setToken] = useState(false);
   const form = useRef() as MutableRefObject<HTMLFormElement>;
+  // const [url, setUrl] = useState();
+
+  // useEffect(() => {
+  //   const currentDate = new Date();
+  //   const startYear = currentDate.getFullYear() - 10;
+  //   const endYear = currentDate.getFullYear();
+  //   const urls = [];
+  //   const fetchData = async () => {
+  //     let currentYear = startYear;
+
+  //     while (currentYear <= endYear) {
+  //       try {
+  //         const res = await axios.get(
+  //           `http://archive.org/wayback/available?url=naver.com&timestamp=${currentYear}0101`
+  //         );
+  //         urls.push({
+  //           time: currentYear,
+  //           url: res.data.archived_snapshots.closest.url,
+  //         });
+
+  //         console.log(currentYear);
+  //       } catch (error) {
+  //         console.log("currentYear");
+  //       }
+  //       currentYear++;
+  //     }
+  //     setUrl(urls);
+  //   };
+
+  //   fetchData();
+  // }, []);
 
   const submitFormAndShowCaptcha = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -95,7 +133,6 @@ const Concat: NextPage = () => {
                 w-border="rounded-xl"
               />
             </div>
-
             {token ? (
               <ReCAPTCHA
                 w-m="x-auto"
